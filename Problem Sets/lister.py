@@ -19,3 +19,11 @@ Your Mission:
 """
 
 # Code goes below here 
+num_items = int(input("How many item? "))
+
+stuff = [] 
+
+for i in range(num_items):
+    stuff.append(input("Give me an item: "))
+    
+print(stuff)

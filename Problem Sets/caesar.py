@@ -56,3 +56,22 @@ can use the modulus math to make sure things wrap around! Neat-o!
 """
 
 # Code goes below 
+
+
+# Constants
+UPPER_START = 65
+LOWER_START = 97
+ALPHA = 26
+
+key = int(input("Key: "))
+plainText= input("Plaintext: ")
+
+for char in plainText:
+    if char.isupper():
+        print(chr((ord(char) - UPPER_START + key) % ALPHA + UPPER_START), end="")
+    elif char.islower():
+        print(chr((ord(char) - LOWER_START + key) % ALPHA + LOWER_START), end="")
+    else:
+        print(char, end="")
+print()
+

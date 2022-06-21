@@ -37,3 +37,10 @@ Example Run:
 """
 
 # Code goes below 
+string = input("Please enter a string: ")
+
+for char in string:
+    print(char * 2, end = "")
+
+print() 
+

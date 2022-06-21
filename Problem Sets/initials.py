@@ -46,3 +46,13 @@ Example Runs:
 """
 
 # Code goes below here 
+name = input("Name: ")
+
+# Capitalize first character in every word  
+name = name.title() 
+
+for letter in name:
+    if letter.isupper():
+        print(letter, end = "")
+
+print()
