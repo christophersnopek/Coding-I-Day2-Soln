@@ -18,21 +18,28 @@ Specification:
 """
 
 # Code goes below here 
-# get a height 
+# get a height between 0 and 23 (inclusive)
+
 while True: 
-    height = input(int("height: "))
+    height = int(input("height: "))
     if height >= 0 and height <= 23:
         break
-
-for line in range(height):
+    
+for line in range(height): 
     # print spaces
-    for a in range(1, height - line):
+    for spaces in range(height - line - 1):
         print(" ", end = "")
-    # print blocks
-    for a in range(1, line + 3):
+    
+    # print left-pyramid  
+    for hashes in range(line + 2):
         print("#", end = "")
-    print(" ", end = "")
-    for a in range(1, line + 3):
+
+    # print gap 
+    print("  ", end = "")
+
+    # print right-pyramid 
+    for hashes in range(line + 2):
         print("#", end = "")
-        
+
+    # Print newline 
     print() 
